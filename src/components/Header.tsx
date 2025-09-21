@@ -32,11 +32,30 @@ const Header = () => {
         {/* Top bar */}
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-primary text-primary-foreground">
-              <span className="text-lg font-bold">A</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <img 
+                src="/src/assets/agrito-logo.png" 
+                alt="Agrito Logo" 
+                className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-200"
+                onError={(e) => {
+                  // Fallback to text logo if image fails to load
+                  const target = e.currentTarget as HTMLImageElement;
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  target.style.display = 'none';
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center hidden group-hover:scale-110 transition-transform duration-200">
+                <span className="text-primary-foreground font-bold text-lg">🌱</span>
+              </div>
             </div>
-            <span className="text-xl font-bold text-primary">Agrito</span>
+            <div className="flex flex-col">
+              <span className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                Agrito
+              </span>
+              <span className="text-xs text-muted-foreground -mt-1">Farm to You</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

@@ -218,56 +218,92 @@ const Index = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                Featured Products
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Our most popular and highest-rated products
-              </p>
+      <section className="py-20 bg-gradient-to-br from-muted/30 to-muted/50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1592983873570-2798b9a593e0?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center opacity-5"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <Star className="w-4 h-4 fill-current" />
+              Most Popular
             </div>
-            <Button asChild variant="outline">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Featured Products
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Discover our hand-picked selection of premium agricultural products trusted by thousands of farmers
+            </p>
+            <Button asChild variant="outline" size="lg" className="group">
               <Link to="/shop">
-                View All
-                <ArrowRight className="ml-2 h-4 w-4" />
+                Explore All Products
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredProducts.map((product, index) => (
+              <div 
+                key={product.id} 
+                className="group animate-fade-in"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute top-3 left-3 z-10">
+                    <Badge className="bg-primary text-primary-foreground shadow-lg">
+                      ⭐ Featured
+                    </Badge>
+                  </div>
+                  <ProductCard product={product} />
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* New Arrivals */}
-      <section className="py-16">
+      <section className="py-20 bg-background relative">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center mb-12">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                New Arrivals
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Latest additions to our product catalog
-              </p>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-success/10 text-success px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+              Just Arrived
             </div>
-            <Button asChild variant="outline">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+              <span className="bg-gradient-to-r from-success to-success/70 bg-clip-text text-transparent">
+                New Arrivals
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+              Fresh products just added to our collection - be the first to try these innovative agricultural solutions
+            </p>
+            <Button asChild size="lg" className="group">
               <Link to="/shop">
-                View All
-                <ArrowRight className="ml-2 h-4 w-4" />
+                Shop New Products
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {newProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {newProducts.map((product, index) => (
+              <div 
+                key={product.id} 
+                className="group animate-fade-in"
+                style={{ animationDelay: `${index * 0.15}s` }}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-card border shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                  <div className="absolute top-3 left-3 z-10">
+                    <Badge className="bg-success text-success-foreground shadow-lg animate-pulse">
+                      🆕 New
+                    </Badge>
+                  </div>
+                  <div className="absolute top-3 right-3 z-10">
+                    <div className="w-3 h-3 bg-success rounded-full animate-ping"></div>
+                  </div>
+                  <ProductCard product={product} />
+                </div>
+              </div>
             ))}
           </div>
         </div>
