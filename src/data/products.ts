@@ -1,3 +1,17 @@
+// Import all product images
+import wheatSeeds from "@/assets/wheat-seeds.jpg";
+import tomatoSeeds from "@/assets/tomato-seeds.jpg";
+import basmatiRice from "@/assets/basmati-rice.jpg";
+import neemFertilizer from "@/assets/neem-fertilizer.jpg";
+import ureaFertilizer from "@/assets/urea-fertilizer.jpg";
+import gardenTools from "@/assets/garden-tools.jpg";
+import steelShovel from "@/assets/steel-shovel.jpg";
+import organicCompost from "@/assets/organic-compost.jpg";
+import dripIrrigation from "@/assets/drip-irrigation.jpg";
+import vermicompost from "@/assets/vermicompost.jpg";
+import maizeSeeds from "@/assets/maize-seeds.jpg";
+import plantPots from "@/assets/plant-pots.jpg";
+
 export interface Product {
   id: string;
   name: string;
@@ -27,7 +41,7 @@ export const products: Product[] = [
     id: "1",
     name: "Organic Wheat Seeds - 5kg Bag",
     price: 999,
-    image: "https://m.media-amazon.com/images/I/81n+K8tOjBL._AC_SL1500_.jpg",
+    image: wheatSeeds,
     category: "seeds",
     description: "Premium quality organic wheat seeds for high yield farming. Disease resistant variety with excellent germination rate.",
     rating: 4.5,
@@ -39,7 +53,7 @@ export const products: Product[] = [
     id: "2",
     name: "Hybrid Tomato Seeds - 100g Pack",
     price: 649,
-    image: "https://m.media-amazon.com/images/I/71c8ThQvX-L._AC_SL1500_.jpg",
+    image: tomatoSeeds,
     category: "seeds",
     description: "High yielding hybrid tomato seeds with superior taste and disease resistance. Perfect for greenhouse and field cultivation.",
     rating: 4.3,
@@ -53,7 +67,7 @@ export const products: Product[] = [
     price: 1899,
     originalPrice: 2199,
     discount: 14,
-    image: "https://m.media-amazon.com/images/I/91rU5w8frhL._AC_SL1500_.jpg",
+    image: basmatiRice,
     category: "organic",
     description: "Authentic premium basmati rice with long grains and aromatic fragrance. Aged for perfect taste and texture.",
     rating: 4.7,
@@ -65,7 +79,7 @@ export const products: Product[] = [
     id: "4",
     name: "Neem Fertilizer Cake - 2kg",
     price: 750,
-    image: "https://m.media-amazon.com/images/I/81L8VxKmFOL._AC_SL1500_.jpg",
+    image: neemFertilizer,
     category: "fertilizers",
     description: "100% organic neem cake fertilizer for soil enrichment and natural pest control. Slow release nutrients for plants.",
     rating: 4.4,
@@ -76,7 +90,7 @@ export const products: Product[] = [
     id: "5",
     name: "Urea Fertilizer Pack - 5kg",
     price: 1299,
-    image: "https://m.media-amazon.com/images/I/71jVq+URc2L._AC_SL1500_.jpg",
+    image: ureaFertilizer,
     category: "fertilizers",
     description: "High grade urea fertilizer for enhanced plant growth and nitrogen supplementation. Suitable for all crops.",
     rating: 4.2,
@@ -89,7 +103,7 @@ export const products: Product[] = [
     price: 2499,
     originalPrice: 2999,
     discount: 17,
-    image: "https://m.media-amazon.com/images/I/81Sh+GbtfQL._AC_SL1500_.jpg",
+    image: gardenTools,
     category: "tools",
     description: "Complete gardening tool set including trowel, pruner, rake, weeder, and cultivator. Durable steel construction.",
     rating: 4.6,
@@ -101,7 +115,7 @@ export const products: Product[] = [
     id: "7",
     name: "Steel Farming Shovel",
     price: 899,
-    image: "https://m.media-amazon.com/images/I/81zn-K6zoEL._AC_SL1500_.jpg",
+    image: steelShovel,
     category: "tools",
     description: "Heavy duty steel farming shovel with ergonomic wooden handle. Perfect for digging and soil preparation.",
     rating: 4.3,
@@ -112,7 +126,7 @@ export const products: Product[] = [
     id: "8",
     name: "Organic Compost Fertilizer - 10kg",
     price: 1299,
-    image: "https://m.media-amazon.com/images/I/91SoeJqvqYL._AC_SL1500_.jpg",
+    image: organicCompost,
     category: "organic",
     description: "Premium organic compost made from kitchen waste and farm residue. Rich in nutrients and beneficial microorganisms.",
     rating: 4.5,
@@ -125,7 +139,7 @@ export const products: Product[] = [
     price: 3499,
     originalPrice: 3999,
     discount: 13,
-    image: "https://m.media-amazon.com/images/I/81iN0R9EBaL._AC_SL1500_.jpg",
+    image: dripIrrigation,
     category: "tools",
     description: "Complete drip irrigation system for efficient water management. Includes pipes, emitters, and connectors.",
     rating: 4.4,
@@ -137,7 +151,7 @@ export const products: Product[] = [
     id: "10",
     name: "Vermicompost - 25kg Pack",
     price: 1799,
-    image: "https://m.media-amazon.com/images/I/81h6rp6N1uL._AC_SL1500_.jpg",
+    image: vermicompost,
     category: "organic",
     description: "High quality vermicompost produced by earthworms. Rich in nutrients and improves soil health naturally.",
     rating: 4.6,
@@ -149,7 +163,7 @@ export const products: Product[] = [
     id: "11",
     name: "Hybrid Maize Seeds - 1kg",
     price: 799,
-    image: "https://m.media-amazon.com/images/I/71Ed-M4VfUL._AC_SL1500_.jpg",
+    image: maizeSeeds,
     category: "seeds",
     description: "High yielding hybrid maize seeds with excellent drought tolerance and disease resistance.",
     rating: 4.3,
@@ -162,7 +176,7 @@ export const products: Product[] = [
     price: 599,
     originalPrice: 799,
     discount: 25,
-    image: "https://m.media-amazon.com/images/I/71wNwrKpHcL._AC_SL1500_.jpg",
+    image: plantPots,
     category: "tools",
     description: "Eco-friendly biodegradable plant pots made from natural fibers. Perfect for seedling cultivation.",
     rating: 4.4,
